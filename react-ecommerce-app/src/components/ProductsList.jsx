@@ -5,17 +5,22 @@ function ProductsList({ product }) {
   const { addToCart } = useContext(CartContext);
 
   return (
-    <div className='product-card'>
-      <img
-        src={product.image_url}
-        alt={product.name}
-        className='product-image'
-      />
-      <h3>{product.name}</h3>
-      <p>{product.description}</p>
-      <p>${product.price}</p>
+    <div className='productCard'>
+      <div className='productImageContainer'>
+        <img
+          src={product.image_url}
+          alt={product.name}
+          className='product-image'
+        />
+      </div>
+      <div className='textContainer'>
+        <p>{product.name}</p>
+        <p className='Price'>${product.price}</p>
+      </div>
       <div>
-        <button onClick={() => addToCart(product)}>Add to Cart</button>
+        <button className='addToCart' onClick={() => addToCart(product)}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );

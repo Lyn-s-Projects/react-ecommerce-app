@@ -1,0 +1,26 @@
+/* Products */
+.filterDropdown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.filterDropdown select {
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+.products {
+  margin-top: 60px;
+}
+.productsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  justify-items: center;
+  justify-content: center;
+  width: fit-content;
+}

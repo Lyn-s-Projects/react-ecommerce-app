@@ -18,14 +18,14 @@ export const CartProvider = ({ children }) => {
       }
       return [...prevCart, { ...product, quantity: 1 }];
     });
-    setMessage(`${product.title} has been added to your cart.`);
+    setMessage(`Item successfully added to your cart! 🎉`);
   }, []);
 
   const removeFromCart = useCallback(productId => {
     setCart(prevCart => {
       const removedItem = prevCart.find(item => item.id === productId);
       const newCart = prevCart.filter(item => item.id !== productId);
-      setMessage(`${removedItem.title} has been removed from your cart.`);
+      setMessage('Item successfully removed from your cart! 🗑️');
       return newCart;
     });
   }, []);

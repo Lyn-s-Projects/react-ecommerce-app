@@ -15,12 +15,12 @@ function CartPage() {
         <>
           {cart.map(item => (
             <div key={item.id} className='cart-item'>
-              <img src={item.image} alt={item.title} />
-              <div>
+              <img src={item.image_url} alt={item.title} />
+              <div className='cartItemDetails'>
                 <h3>{item.title}</h3>
                 <p>Price: ${item.price}</p>
-                <p>
-                  Quantity:
+                <p>Quantity:</p>
+                <div className='quantityControls'>
                   <button
                     onClick={() =>
                       updateQuantity(item.id, Math.max(1, item.quantity - 1))
@@ -28,15 +28,22 @@ function CartPage() {
                   >
                     -
                   </button>
+
                   {item.quantity}
                   <button
                     onClick={() => updateQuantity(item.id, item.quantity + 1)}
                   >
                     +
                   </button>
-                </p>
+                </div>
                 <p>Subtotal: ${(item.price * item.quantity).toFixed(2)}</p>
-                <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                <button
+                  className='cartRemove'
+                  onClick={() => removeFromCart(item.id)}
+                >
+                  <span className='removeItemIcon'></span>
+                  Remove
+                </button>
               </div>
             </div>
           ))}

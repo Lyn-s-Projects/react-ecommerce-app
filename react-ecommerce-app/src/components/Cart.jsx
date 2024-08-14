@@ -102,9 +102,9 @@ function Cart() {
               <div className='cartTotal'>
                 <h3>Total: ${totalPrice.toFixed(2)}</h3>
               </div>
-              {/* <Link to='/cart' className='viewCartBtn' onClick={toggleCart}>
+              <Link to='/cart' className='viewCartBtn' onClick={toggleCart}>
                 View Full Cart
-              </Link> */}
+              </Link>
             </>
           )}
         </div>

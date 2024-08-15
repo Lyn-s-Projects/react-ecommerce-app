@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import ProductsList from '../components/ProductsList';
 import { CartContext } from '../contexts/CartContext';
+import './Pages.css';
 import Banner from '../assets/hero-banner.jpg';
 import Footer from './Footer';
 

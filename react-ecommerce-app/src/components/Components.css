@@ -38,6 +38,44 @@ nav ul li {
   color: #fff;
 }
 
+* Navbar */ nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 50px;
+  background: #eb5123;
+  position: fixed;
+  width: -webkit-fill-available;
+  z-index: 1;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  font-family: 'Paytone One', sans-serif;
+  letter-spacing: 0.5px;
+  margin-right: 60px;
+}
+
+.navItems ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navItems ul li a:hover {
+  text-decoration: underline;
+}
+
+.navItems ul li a:active {
+  text-decoration: underline;
+  color: #fff;
+}
+
 /* Cart */
 
 .cart-icon {
